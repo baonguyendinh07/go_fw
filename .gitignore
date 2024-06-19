@@ -1,0 +1,6 @@
+/vendor/
+*.exe
+
+go.sum
+
+.vscode/

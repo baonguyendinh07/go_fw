@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/baonguyendinh07/go_fw/cmd"
 )
 
 type student struct {
@@ -29,6 +31,7 @@ func returnJson(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	cmd.Execute()
 	http.HandleFunc("/", returnJson)
 	log.Fatal(http.ListenAndServe(":3000", nil)) // http://localhost:3000/
 }
